@@ -37,8 +37,8 @@
     position: absolute;
     width: 560px;
     right: -560px;
+/*     z-index: 0; */
     animation: cloud-animation 20s infinite linear;
-    z-index: 0;
 }
 
 @keyframes suggar-animation {
