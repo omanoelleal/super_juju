@@ -1,0 +1,32 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.suggar {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: suggar-animation 7s infinite linear;
+}
+
+@keyframes suggar-animation {
+    from {
+        right: -80px;
+    }
+    to 
+    {
+        right: 101%;
+    }
+}
+
