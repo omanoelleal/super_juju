@@ -1,8 +1,7 @@
 @font-face {
     font-family: "Super Mario World";
-    src: url(/fonts/SuperMarioWorld.ttf);
+    src: url(/superjujuworld/fonts/SuperMarioWorld.ttf);
 }
-
 * {
     margin: 0;
     padding: 0;
