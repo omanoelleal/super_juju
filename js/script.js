@@ -7,6 +7,7 @@ let score_title = document.querySelector('.score_title');
 let score_message = document.querySelector('.score_message');
 const audioPulo = document.getElementById("audioPulo");
 const audioGameOver = document.getElementById("audioGameOver");
+const audioPerdeuVida = document.getElementById("audioPerdeuVida");
 
 const jump = () => {
     audioPulo.play();
@@ -32,6 +33,8 @@ const loop = setInterval(() => {
 
     if (suggarPosition <= 130 && suggarPosition > 0 && princessPosition < 80) {
 
+        audioPerdeuVida.play();
+
         suggar.style.animation = 'none';
         suggar.style.left = `${suggarPosition}px`;
 
@@ -41,12 +44,13 @@ const loop = setInterval(() => {
         princess.src = "./imagens/game-over.png"
         princess.style.width = "130px"
         princess.style.marginLeft = "20px"
-
-        audioGameOver.play();
-
-        game_over_message.innerHTML = 'GAME OVER';
-        score_message.innerHTML = `YOUR SCORE ${score_val.innerHTML}`;
-        botaorestart.style.display = "block";
+        
+        setTimeout(() =>{
+            audioGameOver.play();
+            game_over_message.innerHTML = 'GAME OVER';
+            score_message.innerHTML = `YOUR SCORE ${score_val.innerHTML}`;
+            botaorestart.style.display = "block";
+        }, 3000);
         
         clearInterval(loop);
         
