@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
 
-    <title>Super Juju</title>
+    <title>Super Juju World</title>
 </head>
 <body>
     
@@ -15,6 +15,22 @@
         <img src="./imagens/suggar.png" class="suggar">
         <img src="./imagens/princess.gif" class="princess">
         <img src="./imagens/clouds.png" class="clouds">
+        <div class="message">
+            <span class="game_over_message"></span><br>
+            <span class="score_message"></span><br>
+            <span class="information"></span>
+            <button type="button" id="restart">PRESS TO START A NEW GAME</button>
+        </div>
+        <div class="score">
+            <span class="score_title"></span>
+            <span class="score_val"></span>
+        </div>
+        <audio id="audioPulo">
+            <source src="/sounds/audioPulo.wav" type="audio/wav">
+        </audio>
+        <audio id="audioGameOver">
+            <source src="/sounds/audioGameOver.mp3" type="audio/wav">
+        </audio>
     </div>
 
 </body>

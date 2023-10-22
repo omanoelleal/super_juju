@@ -1,12 +1,22 @@
-* { 
+@font-face {
+    font-family: "Super Mario World";
+    src: url(/fonts/SuperMarioWorld.ttf);
+}
+
+* {
     margin: 0;
     padding: 0;
+    border: none;
+    outline: none;
     box-sizing: border-box;
+    font-family: "Super Mario World";
+    font-size: 44px;
 }
 
 .game-board{
     width: 100%;
-    height: 500px;
+    /* height: 100%; */
+    height: 700px;
     border: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative;
@@ -40,6 +50,50 @@
 /*     z-index: 0; */
     animation: cloud-animation 20s infinite linear;
 }
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 0;
+	font-size: 0;
+	font-weight: bold;
+	color: gold;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.score_val {
+    color: gold;
+    font-weight: bold;
+}
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 40%;
+	left: 50%;
+	font-size: 2em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+    left: 70px;
+    text-align: center;
+    position: absolute;
+}
 
 @keyframes suggar-animation {
     from {
@@ -58,13 +112,13 @@
         bottom: 100px;
     }
     40% {
-        bottom: 180px;
+        bottom: 160px;
     }
     50% {
         bottom: 180px;
     }
     60% {
-        bottom: 180px;
+        bottom: 160px;
     }
     80% {
         bottom: 100px;
